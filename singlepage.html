@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPA App</title>
+    <style>
+      div {
+        display: none;
+      }
+
+      @keyframes move {
+        0% {
+          top: -200px;
+        }
+        100% {
+          top: 0;
+        }
+      }
+
+      @keyframes show {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .heading {
+        position: relative;
+        animation-name: move;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+      }
+
+      h1 {
+        animation-name: show;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+      }
+    </style>
+
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <h1 class="heading">Welcome</h1>
+    <button data-page="page1">Page 1</button>
+    <button data-page="page2">Page 2</button>
+    <button data-page="page3">Page 3</button>
+    <div id="page1">
+      <h1>This is Page 1</h1>
+    </div>
+    <div id="page2">
+      <h1>This is Page 2</h1>
+    </div>
+    <div id="page3">
+      <h1>This is Page 3</h1>
+    </div>
+  </body>
+</html>
